@@ -1,10 +1,12 @@
 import unittest
-
+from dotenv import load_dotenv
 from haystack import Document
 from haystack.document_stores.in_memory import InMemoryDocumentStore
 
 from src.indexing_pipeline import indexing
 from src.ranking_pipeline import ranking
+
+load_dotenv()
 
 
 class TestPipelines(unittest.TestCase):
